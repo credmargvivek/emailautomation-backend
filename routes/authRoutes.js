@@ -19,10 +19,10 @@ router.post('/google-auth', async (req, res) => {
     });
 
     const payload = ticket.getPayload();
-
-
+     
+    
     console.log('payload --->',payload);
-  
+    
     const { email, sub: googleId, name, picture } = payload;
 
     let user = await User.findOne({ email });

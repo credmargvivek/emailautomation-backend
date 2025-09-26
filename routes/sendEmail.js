@@ -44,10 +44,10 @@ Website: ${companyData.domain ? `https://${companyData.domain}` : 'Not available
 Industry: Determine from company name and domain
 Recent news/update: Research if possible
 
-IMPORTANT: Format your response EXACTLY like this:
+IMPORTANT: Format your response should be a string strictly be like "SUBJECT: || BODY: ". Don't include anything uneccessary. For example: 
 SUBJECT: [Your subject line here]
 ||
-BODY: Hi ${contactName},
+BODY: Hi ${contactName}, //don't modify this word ${contactName} after Hi
 
 [Personalized intro referencing company & update and do not use link].
 
