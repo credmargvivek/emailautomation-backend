@@ -42,7 +42,8 @@ router.post('/google-auth', async (req, res) => {
     res.cookie('jwt', jwtToken, {
       httpOnly: true,
       secure: process.env.NODE_ENV === 'production',
-      sameSite: 'strict',
+      // sameSite: 'strict',
+      sameSite: 'none',
       maxAge: 24 * 60 * 60 * 1000,
     });
 
@@ -71,7 +72,8 @@ router.post('/logout', (req, res) => {
   res.clearCookie('jwt', {
     httpOnly: true,
     secure: process.env.NODE_ENV === 'production',
-    sameSite: 'strict',
+    // sameSite: 'strict',
+    sameSite:'none'
   });
   res.json({ success: true, message: 'Logged out successfully' });
 });
